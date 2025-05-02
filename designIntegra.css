@@ -1,0 +1,122 @@
+/* 
+Diseño elaborado y comentado por Jairo Adair Antonio Cabrera del grupo Programación 405 del Colegio
+de Estudios Cientificos y Tecnologicos del Estado de México Chimalhuacán Plantel II.
+Este diseño puede ser declarado como propio, por lo tanto, puede haber reclamos y/o disputas por 
+el uso no autorizado de este diseño en especifico.
+*/
+
+.cerrarCarrasco {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarCarrasco:hover {
+    color: red;
+  }
+
+  .cerrarDiego {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarDiego:hover {
+    color: red;
+  }
+
+  .cerrarAgus {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarAgus:hover {
+    color: red;
+  }
+
+  .cerrarLely {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarLely:hover {
+    color: red;
+  }
+
+  .cerrarAbad {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarAbad:hover {
+    color: red;
+  }
+
+  .cerrarHaide {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarHaide:hover {
+    color: red;
+  }
+
+  .cerrarJairo {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarJairo:hover {
+    color: red;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

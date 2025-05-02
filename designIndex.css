@@ -1,0 +1,238 @@
+/* 
+Diseño elaborado y comentado por Jairo Adair Antonio Cabrera del grupo Programación 405 del Colegio
+de Estudios Cientificos y Tecnologicos del Estado de México Chimalhuacán Plantel II.
+Este diseño puede ser declarado como propio, por lo tanto, puede haber reclamos y/o disputas por 
+el uso no autorizado de este diseño en especifico.
+*/
+
+* {     /* Deshabilita la selección en la página 'index' */
+    -webkit-user-select: none; 
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none;         
+  }
+  
+  
+  body{     /* Diseño principal del cuerpo de la página principal */
+      background-image: url(Fondo.jpg);         /* Coloca la imagen en el fondo */
+      background-size: cover;           /* Hace que la imagen cubra toda la pantalla */
+      background-position: center;          /* Centra la imagen */
+      background-repeat: no-repeat;         /* Evita que la imagen se repita */
+      font-family: 'Montserrat', sans-serif;      /* Diseño del estilo de fuente de la página principal */
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      transition: opacity 0.5s ease;
+  }
+
+  body.fade-out {
+    opacity: 0;
+  }
+  
+  button {      /* Diseño de los botones de la página principal */
+      font-family: 'Montserrat', sans-serif;      /* Diseño principal del estilo de fuente de los botones */
+      background-color: #f8db58;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 10px;
+  }
+  
+  button:hover {      /* Efecto para cambiar el color mientras el cursor este en el botón */
+      background-color: #b3a700;
+  }
+  
+  .xd-contenedor {      /* Estilos para el contenedor del contenedor del contenedor*/
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 80vw;
+    height: 80vw;
+    max-width: 600px;
+    max-height: 600px;
+  }
+  
+  .xd {     /* Estilos para el contenedor del contenedor */
+    
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  .xd-Info {      /* Estilos para cada contenedor */
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  @media (max-width: 1080px) {      /* Media Queries que ajustan los contenedores en distintas resoluciones */
+    .contenedor-participantes {
+      padding: 10px;
+    }
+  }
+  
+
+footer {     /* Diseño del pie de página */
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+  
+    background-color: #222;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;      /* Diseño del estilo de fuente del pie de página */
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .footer-content {     /* Tamaño del contenido del pie de página */
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .social-icons {
+    margin-bottom: 15px;      /* Tamaño de la separación de los iconos de los links en el pie de página */
+  }
+  
+  .social-icons a {     /* Diseño de los iconos en el pie de página */
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {     /* Efecto para cambiar el color de los iconos mientras el cursor está sobre ellos */
+    color: #fffc48;
+  }
+  
+  .footer-links {     /* Diseño de los links del pie de página */
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  
+  .footer-links a {     /* Color y efecto del cursor sobre los links del pie de página */
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {     /* Efecto para cambiar el color de los links mientras el cursor está sobre ellos */
+    color: #fff;
+  }
+  
+  .footer p {     /* Diseño de los derechos Copyright definido en el pie de página */
+    margin-top: 20px;
+    font-size: 13px;
+    color: #888;
+  } 
+  
+  @media (max-width: 1080px) {      /* Ajuste automatico del pie de página dependiendo la resolución de la pantalla del usuario */
+    .footer-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .social-icons a {     /* Diseño de los iconos en caso de hacer el ajuste */
+      font-size: 24px;
+      margin: 8px;
+    }
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* Fondo con desenfoque */
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px); /* Soporte para Safari */
+  }
+  
+  
+  .modal-contenido {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 700px;
+    height: 60vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    animation: slideIn 0.4s ease;
+
+    background-color: rgba(255, 252, 221, 0.671); /* blanco semi-transparente */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  .cerrarTerminos {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarTerminos:hover {
+    color: red;
+  }
+  
+  .cerrarPrivacidad {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .cerrarPrivacidad:hover {
+    color: red;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

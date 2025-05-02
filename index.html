@@ -1,0 +1,180 @@
+<!--
+Elaborado y comentado por Jairo Adair Antonio Cabrera del grupo Programación 405 del Colegio
+de Estudios Cientificos y Tecnologicos del Estado de México Chimalhuacán Plantel II.
+Esta página puede ser declarada como propia, por lo tanto, puede haber reclamos y/o disputas por 
+el uso no autorizado o indebido del contenido o del código esta página o cualquier otra del sitio.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Solar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">      <!-- Conexión con las fuentes de uso gratis de Google -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">      <!-- Conexión con los iconos de redes sociales -->
+    <link rel="stylesheet" href="css/designIndex.css">     <!-- Llamar al archivo CSS de la página 'index' -->
+    <link rel="stylesheet" href="css/designInicio.css">
+</head>
+<body>
+
+    <h1>Panel Solar</h1>
+<br><br><br><br><br><br><br><br><br>
+  <div class="xd-contenedor">     <!-- Contenedor principal -->
+    <div class="xd">      <!-- Contenedor que le hara de carrusel -->
+      <div class="xd-Info" style="background-color: #f8eac5;">      <!-- Contenedor con información sobre nosotros -->
+        <h3>¿Quiénes somos?</h3>
+        <p>Somos un grupo de estudiantes que buscan el desarrollo de energía limpias y sutentables para el plantel.</p>
+        <button onclick="goToParticipantes(); animarSalida();">Conoce a los integrantes del proyecto</button>
+      </div>
+
+      <div class="xd-Info" style="background-color: #f8eac5;">      <!-- Contenedor con información del proyecto -->
+        <h3>¿Cuál es el propósito del proyecto?</h3>
+        <p>El propósito de nuestro proyecto es diseñar un sistema de panel solar controlado por Arduino para reducir el consumo energético de la escuela, promoviendo el uso de energías renovables y fomentando el aprendizaje práctico en tecnología y sostenibilidad.</p>
+        <button id="abrirProposito">¡Conoce más detalles aqui!</button>
+      </div>
+
+      <div class="xd-Info" style="background-color: #f8eac5;">      <!-- Contenedor con los beneficios del proyecto -->
+        <h3>¿Qué hace a nuestro proyecto una idea más razonable?</h3>
+        <p>Nuestro proyecto es razonable porque permite a los estudiantes de preparatoria crear una solución sostenible y accesible, utilizando paneles solares y Arduino para reducir el consumo de energía y aprender de forma práctica sobre tecnología y energías renovables.</p>
+        <button id="abrirBeneficios">¡Conoce todos los beneficios aquí!</button>
+      </div>
+    </div>
+  </div>
+
+<footer class="footer">     <!-- Pie de página -->
+  <div class="footer-content">
+    <div class="social-icons">      <!-- Iconos de redes sociales en el footer -->
+      <a href="https://github.com/tu-usuario" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://x.com/S0larV0lt" target="_blank" rel="noopener" aria-label="X (antes Twitter)"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.instagram.com/solar_volt1?igsh=MXYxamZyMWM2aHZnZg==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UC5uTgOLY50SemLUJl1w7haQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=solarvolt18@gmail.com" target="_blank" rel="noopener"><i class="fab fa-google"></i></a>
+    </div>
+
+    <ul class="footer-links">     <!-- Links principales de contacto en el footer -->
+      <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=solarvolt18@gmail.com" target="_blank" rel="noopener">Contacto</a></li>
+      <li><a href="#" id="abrirTerminos">Términos y condiciones</a></li>
+      <li><a href="#" id="abrirPrivacidad">Política de privacidad</a></li>
+    </ul>
+  </div>
+
+  <p class="copyright">     <!-- Declaración de derechos de propiedad del uso y modificación de las páginas del sitio web -->
+    © 2025 CECyTEM Plantel Chimalhuacán II. Todos los derechos reservados.
+  </p>
+</footer>
+
+<div id="modalBeneficios" class="modal">      <!-- Cuadro de dialogo emergente para los beneficios -->
+  <div class="modal-contenido">
+    <span class="cerrarBeneficios">&times;</span>
+    <h2>Beneficios del Panel Solar</h2>
+
+    <h3>Ahorro de Energía</h3>
+    <p>
+      El panel solar permite reducir el consumo de electricidad proveniente de fuentes tradicionales, ayudando a disminuir los costos energéticos.
+    </p>
+
+    <h3>Cuidado del Medio Ambiente</h3>
+    <p>
+      Al funcionar con energía solar, se evita la emisión de gases contaminantes, lo que contribuye al cuidado del planeta y la lucha contra el cambio climático.
+    </p>
+
+    <h3>Aprendizaje en la Práctica</h3>
+    <p>
+      Este proyecto permitió a los estudiantes aplicar conocimientos de física, electrónica y sustentabilidad en un contexto real.
+    </p>
+
+    <h3>Independencia Energética</h3>
+    <p>
+      El panel puede alimentar dispositivos de forma autónoma, incluso en lugares donde no hay conexión eléctrica disponible.
+    </p>
+
+    <h3>Inversión a Largo Plazo</h3>
+    <p>
+      Aunque requiere una inversión inicial, el mantenimiento es mínimo y la vida útil del panel es prolongada, lo que representa un ahorro a futuro.
+    </p>
+</div>
+  </div>
+
+  <div id="modalProposito" class="modal">     <!-- Cuadro de dialogo emergente para el proposito -->
+    <div class="modal-contenido">
+      <span class="cerrarProposito">&times;</span>
+      <h2>Propósito del Proyecto</h2>
+
+    <h3>Desarrollo de Energía Sostenible</h3>
+    <p>
+      El objetivo principal de este proyecto es crear un panel solar funcional utilizando conocimientos adquiridos en diversas áreas como física, ingeniería y sustentabilidad. Buscamos ofrecer una alternativa energética limpia, renovable y accesible.
+    </p>
+
+    <h3>Fomentar la Innovación</h3>
+    <p>
+      A través de este proyecto, los estudiantes exploran cómo la tecnología puede ser aplicada para resolver problemas reales y contribuir al avance de energías renovables.
+    </p>
+
+    <h3>Conciencia Ecológica</h3>
+    <p>
+      Uno de los propósitos clave es sensibilizar sobre la importancia de las energías limpias y su papel en la reducción de la huella de carbono, promoviendo un futuro más verde y saludable.
+    </p>
+
+    <h3>Aplicación Práctica del Conocimiento</h3>
+    <p>
+      Los estudiantes han trabajado en la construcción y diseño del panel solar, aplicando teorías aprendidas en clase a un proyecto real. Esto les brinda una experiencia invaluable en la resolución de problemas prácticos.
+    </p>
+
+    <h3>Colaboración y Trabajo en Equipo</h3>
+    <p>
+      El proyecto también tiene como objetivo promover el trabajo en equipo, la colaboración interdisciplinaria y el aprendizaje compartido entre los estudiantes, quienes aportaron sus ideas y habilidades en cada etapa.
+    </p>
+  </div>
+    </div>
+
+<div id="modalTerminos" class="modal">      <!-- Cuadro de dialogo emergente para los terminos -->
+  <div class="modal-contenido">
+    <span class="cerrarTerminos">&times;</span>
+    <h2>Términos y Condiciones</h2>
+  <p><strong>Última actualización:</strong> Abril 2025</p>
+
+  <p>Bienvenido/a a nuestro sitio web dedicado al proyecto de energía solar desarrollado por estudiantes del Colegio de Estudios Cientificos y Tecnologicos del Estado de México Plantel Chimalhuacán II. Te pedimos que leas cuidadosamente estos Términos y Condiciones antes de utilizar nuestro sitio.</p>
+
+  <h3>1. Propósito del sitio</h3>
+  <p>Este sitio web tiene como objetivo compartir información educativa y experimental sobre el desarrollo de un <strong>panel solar casero</strong>, construido como parte de un proyecto académico. Toda la información compartida es de carácter informativo y no representa asesoría profesional.</p>
+
+  <h3>2. Uso del contenido</h3>
+  <p>El contenido de este sitio —incluyendo textos, imágenes, gráficos y resultados del proyecto— es propiedad del equipo de estudiantes y puede ser utilizado únicamente con fines educativos o personales, <strong>no comerciales</strong>. Se prohíbe su reproducción o distribución sin autorización previa.</p>
+
+  <h3>3. Exactitud de la información</h3>
+  <p>Aunque intentamos mantener la información actualizada y precisa, este sitio puede contener errores técnicos o científicos. El proyecto fue realizado con fines escolares, por lo que <strong>no garantizamos exactitud profesional</strong> en todos los datos presentados.</p>
+
+  <h3>4. Seguridad eléctrica</h3>
+  <p>Cualquier persona que intente replicar este proyecto lo hace <strong>bajo su propio riesgo</strong>. Recomendamos supervisión de un adulto o profesional al trabajar con paneles solares, cables o componentes eléctricos.</p>
+
+  <h3>5. Comentarios y contacto</h3>
+  <p>Si deseas contactarnos para hacer preguntas o sugerencias, puedes escribirnos a través del formulario de contacto en el sitio.</p>
+
+  <h3>6. Cambios a los Términos</h3>
+  <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Te recomendamos revisarlos de forma periódica.</p>
+
+  <p><strong>Gracias por visitar nuestro sitio y por apoyar proyectos escolares que fomentan la ciencia y la energía limpia. ☀️</strong></p>
+</div>
+  </div>
+
+<div id="modalPrivacidad" class="modal">      <!-- Cuadro de dialogo emergente para el contenido -->
+  <div class="modal-contenido">
+    <span class="cerrarPrivacidad">&times;</span>
+    <h2>Política de Privacidad</h2>
+    <p>
+      Esta página web no recopila datos personales de sus visitantes. La información mostrada es únicamente con fines educativos, como parte de un proyecto sobre energía solar desarrollado por estudiantes.
+    </p>
+    <p>
+      Si se ofrece un formulario de contacto, los datos enviados serán usados solo para responder consultas relacionadas con el proyecto y no serán compartidos.
+    </p>
+    <p>
+      Esta política puede cambiar en el futuro si el proyecto evoluciona. Cualquier modificación será anunciada en esta misma sección.
+    </p>
+</div>
+  </div>
+
+<script src="js/scriptIndex.js"></script>     <!-- Llamar al archivo de JavaScript de la página 'index' -->
+      
+</body>
+</html>
