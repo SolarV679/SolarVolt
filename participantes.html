@@ -13,8 +13,8 @@ el uso no autorizado o indebido del contenido o del código esta página o cualq
     <title>Participantes del proyecto</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">      <!-- Conexión con las fuentes de uso gratis de Google -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">      <!-- Conexión con los iconos de redes sociales -->
-    <link rel="stylesheet" href="designParti.css">     <!-- Llamar al archivo CSS de la página 'participantes' -->
-    <link rel="stylesheet" href="designIntegra.css">
+    <link rel="stylesheet" href="css/designParti.css">     <!-- Llamar al archivo CSS de la página 'participantes' -->
+    <link rel="stylesheet" href="css/designIntegra.css">
 </head>
 <body>
     <h1>Panel Solar</h1>
@@ -27,49 +27,55 @@ el uso no autorizado o indebido del contenido o del código esta página o cualq
 
 
 <div class="contenedor-grande">
+
+  <button class="flecha izquierda">&#10094;</button>
+
   <div class="contenedor">
     <div class="contenedor-participantes" style="background-color: #f8eac5;">           <!-- Contenedores para redireccionar a la información individual de los integrantes del equipo -->
         <p>Rafael Carrasco Montes de Oca</p>
 
-        <button id="abrirCarrasco">Conoce a nuestro jefe de proyecto</button>         <!-- Botones para redireccionar a la página de información individual solicitada -->
+        <button id="abrirCarrasco" class="pop">Conoce a nuestro jefe de proyecto</button>         <!-- Botones para redireccionar a la página de información individual solicitada -->
     </div>
 
     <div class="contenedor-participantes" style="background-color: #f8eac5;">
       <p>Diego Gael Cuautle Guzmán</p>
 
-      <button id="abrirDiego">Conoce al líder de proyecto</button>
+      <button id="abrirDiego" class="pop">Conoce al líder de proyecto </button>
     </div>
 
     <div class="contenedor-participantes" style="background-color: #f8eac5;">
         <p>Angel Agustín León Robles</p>
 
-        <button id="abrirAgus">Conoce al encargado principal</button>
+        <button id="abrirAgus" class="pop">Conoce al encargado principal</button>
     </div>
 
     <div class="contenedor-participantes" style="background-color: #f8eac5;">
         <p>Lesly Alejandra Colin Herrera</p>
 
-        <button id="abrirLely">Conoce a nuestra encargada de investigación</button>
+        <button id="abrirLely" class="pop">Conoce a nuestra encargada de investigación</button>
     </div>
 
     <div class="contenedor-participantes" style="background-color: #f8eac5;">
         <p>Jesús Abad Mendoza Ortega</p>
 
-        <button id="abrirAbad">Conoce al Programador principal</button>
+        <button id="abrirAbad" class="pop">Conoce al Programador principal</button>
     </div>
 
     <div class="contenedor-participantes" style="background-color: #f8eac5;">
         <p>Valery Haide Pacheco Díaz</p>
 
-        <button id="abrirHaide">Conoce a la encargada de desarrollo de API</button>
+        <button id="abrirHaide" class="pop">Conoce a la encargada de desarrollo de API</button>
     </div>
 
     <div class="contenedor-participantes" style="background-color: #f8eac5;">
         <p>Jairo Adair Antonio Cabrera</p>
 
-        <button id="abrirJairo">Conoce al creador de está página web</button>
+        <button id="abrirJairo" class="pop">Conoce al creador de está página web</button>
     </div>
   </div>
+
+  <button class="flecha derecha">&#10095;</button>
+
 </div>
 
 <footer class="footer">     <!-- Pie de página -->
@@ -212,19 +218,14 @@ el uso no autorizado o indebido del contenido o del código esta página o cualq
     <div class="modal-contenido">
       <span class="cerrarJairo">&times;</span>
       <h3>Jairo Adair Antonio Cabrera</h3>
-      <p>Soy una persona profundamente apasionada por el aprendizaje constante y la mejora continua. Considero que cada experiencia, desafío o proyecto es una oportunidad invaluable para crecer, adquirir nuevos conocimientos y fortalecer habilidades. Mi mentalidad combina creatividad y análisis, permitiéndome abordar los problemas desde distintas perspectivas y proponer soluciones eficaces, innovadoras y bien fundamentadas.
-
-        Uno de mis principales valores es la responsabilidad. Me comprometo con cada tarea que asumo, asegurándome de cumplir con calidad, puntualidad y excelencia. Además, tengo una gran facilidad para integrarme en equipos de trabajo, donde destaco por mi comunicación asertiva, empatía y disposición para colaborar. Disfruto compartir ideas, construir en conjunto y generar un ambiente positivo, donde cada integrante pueda aportar lo mejor de sí.
-        
-        Soy una persona organizada, detallista y meticulosa, lo que me permite mantener el control incluso en situaciones de alta exigencia. Estas cualidades me han permitido asumir roles que requieren planificación, seguimiento de procesos y enfoque en resultados. Al mismo tiempo, mi curiosidad constante me impulsa a explorar nuevas herramientas, metodologías y formas de aportar más valor en todo lo que hago.
-        
-        Más allá de mis competencias técnicas o habilidades profesionales, me esfuerzo cada día por mantener una actitud íntegra, proactiva y humana. Creo firmemente que el verdadero liderazgo y profesionalismo no solo se demuestran con palabras, sino con acciones coherentes y un trato respetuoso hacia los demás. Mi imagen, tanto personal como profesional, refleja autenticidad, confianza y compromiso, valores que definen mi forma de ser y de trabajar.
-        
-        Estoy convencida de que el crecimiento no es un destino, sino un camino continuo. Por eso, estoy siempre abierta a nuevos retos que me permitan seguir aprendiendo, evolucionando y contribuyendo de manera significativa en los proyectos y equipos de los que formo parte.</p>
+      <p>Soy una persona apasionada por el aprendizaje constante y la mejora continua, con una mentalidad creativa y analítica.
+         Valoro la responsabilidad, la calidad, la puntualidad y la excelencia en todo lo que hago. Disfruto colaborar, destacando por mi comunicación asertiva, empatía y disposición para trabajar en equipo.
+         Soy organizado, detallista y meticuloso, con un enfoque en la planificación y los resultados. Mi curiosidad me impulsa a explorar nuevas herramientas y metodologías. Me esfuerzo por mantener una actitud íntegra, proactiva y humana, y creo que el verdadero liderazgo se demuestra con acciones coherentes y un trato respetuoso hacia los demás.
+         Mi imagen personal y profesional se basa en autenticidad, confianza y compromiso. Siempre estoy abierto a nuevos retos para seguir aprendiendo y evolucionando.</p>
     </div>
   </div>
 
-    <script src="scriptParti.js"></script>       <!-- Llamar al archivo de JavaScript de la página 'participantes' -->
+    <script src="js/scriptParti.js"></script>       <!-- Llamar al archivo de JavaScript de la página 'participantes' -->
 
 </body>
 </html>

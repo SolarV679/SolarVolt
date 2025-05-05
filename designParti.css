@@ -12,43 +12,50 @@ el uso no autorizado de este diseño en especifico.
     user-select: none;         
   }
   
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0;
+  }
   
   body{     /* Diseño principal del cuerpo de la página principal */
-      background-image: url(Fondo.jpg);         /* Coloca la imagen en el fondo */
-      background-size: cover;           /* Hace que la imagen cubra toda la pantalla */
-      background-position: center;          /* Centra la imagen */
-      background-repeat: no-repeat;         /* Evita que la imagen se repita */
-      font-family: 'Montserrat', sans-serif;      /* Diseño del estilo de fuente de la página principal */
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      transition: opacity 0.5s ease;
-  }
+    background-image: url(Fondo.jpg);         /* Coloca la imagen en el fondo */
+    background-size: cover;           /* Hace que la imagen cubra toda la pantalla */
+    background-position: center;          /* Centra la imagen */
+    background-repeat: no-repeat;         /* Evita que la imagen se repita */
+    font-family: 'Montserrat', sans-serif;      /* Diseño del estilo de fuente de la página principal */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: block;
+    flex-direction: column;
+    transition: opacity 0.5s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
   body.fade-out {
     opacity: 0;
   }
   
   button {      /* Diseño de los botones de la página principal */
-      font-family: 'Montserrat', sans-serif;      /* Diseño principal del estilo de fuente de los botones */
-      background-color: #f8db58;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-      margin-top: 10px;
-  }
-  
-  button:hover {      /* Efecto para cambiar el color mientras el cursor este en el botón */
-      background-color: #b3a700;
-  }
-  
+    font-family: 'Montserrat', sans-serif;      /* Diseño principal del estilo de fuente de los botones */
+    background-color: #0082C9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
   .contenedor-grande {      /* Estilos para el contenedor del contenedor del contenedor*/
     width: 100%;
     max-width: 1200px;
@@ -58,11 +65,18 @@ el uso no autorizado de este diseño en especifico.
     height: 80vw;
     max-width: 600px;
     max-height: 600px;
+    -webkit-overflow-scrolling: touch; /* Mejora la experiencia en Safari iOS */
+    touch-action: pan-y;             /* Permite scroll vertical */
   }
   
   .contenedor {     /* Estilos para el contenedor del contenedor */
     display: flex;
     transition: transform 0.5s ease-in-out;
+    border-radius: 10px;
+    will-change: transform;
+    transform: translateZ(0);        /* Propiedad estándar */
+    -webkit-transform: translateZ(0);   /* Mejora el rendimiento en Safari */
+    touch-action: none;                /* Desactiva acciones táctiles por defecto */
   }
   
   .contenedor-participantes {      /* Estilos para cada contenedor */
@@ -82,82 +96,88 @@ el uso no autorizado de este diseño en especifico.
   }
   
 
-footer {     /* Diseño del pie de página */
-
+  footer { /* Diseño del pie de página */
+    position: relative;  /* Asegura que el footer esté correctamente posicionado */
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
-  
     background-color: #222;
     color: #fff;
-    padding: 30px 20px;
+    padding: 20px 15px;  /* Ajusté los valores de padding para asegurar que no se acumule mucho espacio */
     text-align: center;
-    font-family: 'Montserrat', sans-serif;      /* Diseño del estilo de fuente del pie de página */
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .footer-content {     /* Tamaño del contenido del pie de página */
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .social-icons {
-    margin-bottom: 15px;      /* Tamaño de la separación de los iconos de los links en el pie de página */
-  }
-  
-  .social-icons a {     /* Diseño de los iconos en el pie de página */
-    color: #fff;
-    margin: 0 10px;
-    font-size: 20px;
-    transition: color 0.3s;
-  }
-  
-  .social-icons a:hover {     /* Efecto para cambiar el color de los iconos mientras el cursor está sobre ellos */
-    color: #fffc48;
-  }
-  
-  .footer-links {     /* Diseño de los links del pie de página */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 15px; /* Reduje un poco el padding */
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido se apile en vez de estar en una fila */
+    justify-content: center;
+    align-items: center; /* Alinea los elementos */
+}
+
+.footer-content { /* Tamaño del contenido del pie de página */
+    max-width: 100%; /* Cambié max-width para que se ajuste a pantallas pequeñas */
+    padding: 0 10px;  /* Asegura que el contenido no se desborde */
+}
+
+.footer-links {
     list-style: none;
     padding: 0;
     margin: 15px 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .footer-links a {     /* Color y efecto del cursor sobre los links del pie de página */
-    color: #bbb;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-  }
-  
-  .footer-links a:hover {     /* Efecto para cambiar el color de los links mientras el cursor está sobre ellos */
+    flex-direction: column;  /* Hace que los links se apilen verticalmente */
+    align-items: center;
+    gap: 10px;  /* Separa los elementos de los links */
+}
+
+.footer-links a {     /* Color y efecto del cursor sobre los links del pie de página */
+  color: #bbb;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {     /* Efecto para cambiar el color de los links mientras el cursor está sobre ellos */
+  color: #fff;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
     color: #fff;
-  }
-  
-  .footer p {     /* Diseño de los derechos Copyright definido en el pie de página */
-    margin-top: 20px;
-    font-size: 13px;
+    margin: 5px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #fffc48;
+}
+
+.footer p { /* Derechos de autor */
+    margin-top: 10px; /* Reduje el espacio entre el copyright y el contenido */
+    font-size: 12px;
     color: #888;
-  } 
-  
-  @media (max-width: 1080px) {      /* Ajuste automatico del pie de página dependiendo la resolución de la pantalla del usuario */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+    footer {
+        padding: 10px 5px; /* Ajusta el padding en pantallas más pequeñas */
+    }
+    
     .footer-links {
-      flex-direction: column;
-      align-items: center;
+        gap: 8px;
     }
-  
-    .social-icons a {     /* Diseño de los iconos en caso de hacer el ajuste */
-      font-size: 24px;
-      margin: 8px;
+
+    .social-icons a {
+        font-size: 16px;  /* Ajusté el tamaño de los iconos */
+        margin: 5px;
     }
-  }
+}
   
   .modal {
     display: none;

@@ -45,3 +45,88 @@ el uso no autorizado de este diseño en especifico.
       transform: translateY(0);
     }
   }  
+
+  .scroll-indicator {
+    position: absolute;
+    top: 55%;
+    left: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeOut 5s 3s forwards; /* Aparece 3s, luego se desvanece */
+  }
+  
+  .scroll-indicator span {
+    font-size: 14px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 8px;
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+  }
+  
+  .arrow {
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: rotate(45deg);
+    animation: bounce 1s infinite;
+  }
+  
+  @keyframes bounce {
+    0%   { transform: translateX(0) rotate(45deg); }
+    50%  { transform: translateX(8px) rotate(45deg); }
+    100% { transform: translateX(0) rotate(45deg); }
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  #izde {
+    text-align: center;
+    margin: 0;
+  }
+
+  .flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+    user-select: none;
+    transition: background 0.2s;
+  }
+  
+  .flecha:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .flecha.izquierda {
+    left: 10px;
+  }
+  
+  .flecha.derecha {
+    right: 10px;
+  }
+  
+  .pop {
+    transition: all 0.3s ease;
+    transform: scale(1);
+  }
+  .pop:hover {
+    background-color: #005A99;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }

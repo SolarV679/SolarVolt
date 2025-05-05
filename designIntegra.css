@@ -120,3 +120,42 @@ el uso no autorizado de este diseño en especifico.
       transform: translateY(0);
     }
   }
+
+  
+  .flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+    user-select: none;
+    transition: background 0.2s;
+  }
+  
+  .flecha:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .flecha.izquierda {
+    left: 10px;
+  }
+  
+  .flecha.derecha {
+    right: 10px;
+  }
+  
+  .pop {
+    transition: all 0.3s ease;
+    transform: scale(1);
+  }
+  .pop:hover {
+    background-color: #005A99;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
