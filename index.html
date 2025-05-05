@@ -13,34 +13,43 @@ el uso no autorizado o indebido del contenido o del código esta página o cualq
     <title>Panel Solar</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">      <!-- Conexión con las fuentes de uso gratis de Google -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">      <!-- Conexión con los iconos de redes sociales -->
-    <link rel="stylesheet" href="designIndex.css">     <!-- Llamar al archivo CSS de la página 'index' -->
-    <link rel="stylesheet" href="designInicio.css">
+    <link rel="stylesheet" href="css/designIndex.css">     <!-- Llamar al archivo CSS de la página 'index' -->
+    <link rel="stylesheet" href="css/designInicio.css">
 </head>
 <body>
 
     <h1>Panel Solar</h1>
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br>
+    <h2>¡Bienvenido a nuestra página!</h2>
+<br><br><br><br><br>
   <div class="xd-contenedor">     <!-- Contenedor principal -->
+    <button class="flecha izquierda">&#10094;</button>
     <div class="xd">      <!-- Contenedor que le hara de carrusel -->
       <div class="xd-Info" style="background-color: #f8eac5;">      <!-- Contenedor con información sobre nosotros -->
-        <h3>¿Quiénes somos?</h3>
+        <h3>¿Quiénes somos?</i></h3>
         <p>Somos un grupo de estudiantes que buscan el desarrollo de energía limpias y sutentables para el plantel.</p>
-        <button onclick="goToParticipantes(); animarSalida();">Conoce a los integrantes del proyecto</button>
+        <button onclick="goToParticipantes(); animarSalida();" class="pop">Conoce a los integrantes del proyecto <i class="fas fa-users"></i> </button>
       </div>
 
       <div class="xd-Info" style="background-color: #f8eac5;">      <!-- Contenedor con información del proyecto -->
         <h3>¿Cuál es el propósito del proyecto?</h3>
         <p>El propósito de nuestro proyecto es diseñar un sistema de panel solar controlado por Arduino para reducir el consumo energético de la escuela, promoviendo el uso de energías renovables y fomentando el aprendizaje práctico en tecnología y sostenibilidad.</p>
-        <button id="abrirProposito">¡Conoce más detalles aqui!</button>
+        <button id="abrirProposito" class="pop">¡Conoce más detalles aqui!</button>
       </div>
 
       <div class="xd-Info" style="background-color: #f8eac5;">      <!-- Contenedor con los beneficios del proyecto -->
         <h3>¿Qué hace a nuestro proyecto una idea más razonable?</h3>
         <p>Nuestro proyecto es razonable porque permite a los estudiantes de preparatoria crear una solución sostenible y accesible, utilizando paneles solares y Arduino para reducir el consumo de energía y aprender de forma práctica sobre tecnología y energías renovables.</p>
-        <button id="abrirBeneficios">¡Conoce todos los beneficios aquí!</button>
+        <button id="abrirBeneficios" class="pop">¡Conoce todos los beneficios aquí!</button>
       </div>
     </div>
+
+    <button class="flecha derecha">&#10095;</button>
+
+    <br><p id="izde">&#10094; Desliza las tajetas para descubrir mas contenido. &#10095;</p>
   </div>
+
+
 
 <footer class="footer">     <!-- Pie de página -->
   <div class="footer-content">
@@ -174,7 +183,7 @@ el uso no autorizado o indebido del contenido o del código esta página o cualq
 </div>
   </div>
 
-<script src="scriptIndex.js"></script>     <!-- Llamar al archivo de JavaScript de la página 'index' -->
+<script src="js/scriptIndex.js"></script>     <!-- Llamar al archivo de JavaScript de la página 'index' -->
       
 </body>
 </html>
